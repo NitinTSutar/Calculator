@@ -10,6 +10,7 @@ This project is a simple calculator application built using HTML, CSS, and JavaS
 - **Equal Button:** Evaluates the current expression.
 - **Responsive Design:** Intuitive layout optimized for all screen sizes, including desktop, tablet, and mobile devices.
 - **Interactive Elements:** Buttons provide visual feedback on hover and click.
+- **Dark Mode:** Toggle between light and dark themes for better visibility in different lighting conditions.
 
 ---
 
@@ -24,6 +25,7 @@ This project is a simple calculator application built using HTML, CSS, and JavaS
 ## 🛠️ Technologies Used
 - **HTML5**: For structuring the calculator layout.
 - **CSS3**: Styling and interactive design.
+- **JavaScript**: For implementing dark mode and interactive functionality.
 
 ---
 
@@ -39,6 +41,10 @@ This project is a simple calculator application built using HTML, CSS, and JavaS
   - `AC`: Clears the entire input.
   - `DE`: Deletes the last character.
   - `=`: Evaluates the entered expression.
+
+### 3. **Dark Mode**
+- **Toggle Button:** Located at the top-right corner of the screen.
+- **Persistent State:** Remembers the user's theme preference across sessions using `localStorage`.
 
 ---
 
