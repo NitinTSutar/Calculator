@@ -4,30 +4,50 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --bg-color: #efebfc;
+    --main-color:#cfeaf0;
+    --text-color:#595959;
+    --sp-color: rgb(4, 161, 72);
+    --dm-bg-color:#204e58;
+    --dm-text-color:#ffffff;
+}
+.darkmode{
+    --bg-color: #111112;
+    --main-color:#204e58;
+    --text-color:#ffffff;
+    --sp-color: rgb(4, 161, 72);
+    --dm-bg-color:#cfeaf0;
+    --dm-text-color:#060606;
+}
 .container{
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #060606;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    
 }
 .calculator{
-    background-color: #204e58;
+    position: relative;
+    background-color:var(--main-color) ;
     padding: 20px;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 .calculator form input{
     border: 0;
     outline: 0;
-    width: 60px;
+    width:50px;
     height: 60px;
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgba(255, 255,255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     margin: 10px;
 }   
@@ -46,12 +66,38 @@ form .display input{
     flex: 1;
     font-size:45px;
     box-shadow: none;
+    border: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 form input.equal{
-    width: 145px;
+    width: 125px;
 }
 
 form input.operator{
-    color: rgb(0, 253, 110);
+    color: var(--sp-color);
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+#theme-switch svg{
+    fill: var(--text-color);
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
 }
